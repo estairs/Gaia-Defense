@@ -32,12 +32,15 @@ The game tests your multitasking skills. Each turret has its own control scheme:
 | **Bottom** | `⭣` | `←` / `→` | `Space` | `V` | `B` |
 |**Left** | `T` | `F` / `H` |
 | **Right** | `I` | `J` / `L` |
-| 
+
 * **Restart:** `Enter` (on Game Over screen)
 
 ## 📸 Screenshots
 
-
+<div align="center">
+  <img src="screenshots/screenshot1.png" width="400" />
+  <img src="screenshots/screenshot2.png" width="400" />
+</div>
 ## 🛠️ Built With
 
 * **Engine:** [Godot 4](https://godotengine.org/)
