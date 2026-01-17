@@ -3,7 +3,7 @@
 ![Banner](screenshots/banner.png)
 > **Protect the Core.** A chaotic, multi-directional arcade shooter made with Godot 4.
 
-[![Play on Itch.io](https://img.shields.io/badge/Play_on-Itch.io-fa5c5c?style=for-the-badge&logo=itch.io)](LINK_DO_SEU_JOGO_AQUI)
+[![Play on Itch.io](https://img.shields.io/badge/Play_on-Itch.io-fa5c5c?style=for-the-badge&logo=itch.io)]((https://estairs.itch.io/gaia-defense))
 [![Godot Engine](https://img.shields.io/badge/Godot-4.x-478cbf?style=for-the-badge&logo=godot-engine)](https://godotengine.org/)
 
 ## 🌍 About the Game
@@ -54,7 +54,7 @@ If you want to check the source code or modify the game:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/SEU_USUARIO/NOME_DO_REPO.git](https://github.com/SEU_USUARIO/NOME_DO_REPO.git)
+    git clone [https://github.com/primokog/gaiadefense.git](https://github.com/primokog/gaiadefense.git)
     ```
 2.  **Import into Godot:**
     * Open Godot Engine 4.x.
@@ -62,10 +62,3 @@ If you want to check the source code or modify the game:
     * Navigate to the cloned folder and select the `project.godot` file.
 3.  **Run:**
     * Press `F5` to play the main scene.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-*Developed by [Seu Nome/Handle].*
