@@ -3,7 +3,7 @@
 ![Banner](screenshots/banner.png)
 > **Protect the Core.** A chaotic, multi-directional arcade shooter made with Godot 4.
 
-[![Play on Itch.io](https://img.shields.io/badge/Play_on-Itch.io-fa5c5c?style=for-the-badge&logo=itch.io)]((https://estairs.itch.io/gaia-defense))
+[![Play on Itch.io](https://img.shields.io/badge/Play_on-Itch.io-fa5c5c?style=for-the-badge&logo=itch.io)](https://estairs.itch.io/gaia-defense)
 [![Godot Engine](https://img.shields.io/badge/Godot-4.x-478cbf?style=for-the-badge&logo=godot-engine)](https://godotengine.org/)
 
 ## 🌍 About the Game
