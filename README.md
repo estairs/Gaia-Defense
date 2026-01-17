@@ -1,6 +1,6 @@
 # Gaia Defense (Earth Defense Protocol)
 
-![Banner]()
+![Banner](screenshots/banner.png)
 > **Protect the Core.** A chaotic, multi-directional arcade shooter made with Godot 4.
 
 [![Play on Itch.io](https://img.shields.io/badge/Play_on-Itch.io-fa5c5c?style=for-the-badge&logo=itch.io)](LINK_DO_SEU_JOGO_AQUI)
