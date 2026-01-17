@@ -1,0 +1,140 @@
+[gd_scene load_steps=10 format=3 uid="uid://okrpjps5ns0j"]
+
+[ext_resource type="Script" uid="uid://lr1phfnlubne" path="res://Scripts/Main.gd" id="1_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://djl4va071438b" path="res://Scenes/Earth.tscn" id="1_r150o"]
+[ext_resource type="Script" uid="uid://bldqwvgqe4eo7" path="res://Scripts/EnemySpawner.gd" id="3_kln2b"]
+[ext_resource type="PackedScene" uid="uid://ds63eppfwx6cg" path="res://Scenes/Enemy.tscn" id="4_rgh2o"]
+[ext_resource type="Script" uid="uid://bskalf12ftf2q" path="res://Scripts/GameOverScreen.gd" id="5_pbw6q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rgh2o"]
+font_size = 30
+
+[sub_resource type="Gradient" id="Gradient_pbw6q"]
+offsets = PackedFloat32Array(0, 0.5169492, 0.9830508)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_v1gob"]
+gradient = SubResource("Gradient_pbw6q")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jw32o"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(320, 180, 1)
+direction = Vector3(0, 0, 0)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+scale_max = 2.0
+color_ramp = SubResource("GradientTexture1D_v1gob")
+
+[node name="Main Scene" type="Node2D"]
+script = ExtResource("1_pbw6q")
+
+[node name="Earth" parent="." instance=ExtResource("1_r150o")]
+position = Vector2(320, 180)
+
+[node name="EnemySpawner" type="Node" parent="."]
+script = ExtResource("3_kln2b")
+enemy_scene = ExtResource("4_rgh2o")
+
+[node name="Timer" type="Timer" parent="EnemySpawner"]
+wait_time = 1.5
+autostart = true
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_right = 33.0
+offset_bottom = 35.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = ",,,,,"
+label_settings = SubResource("LabelSettings_rgh2o")
+
+[node name="GameOverScreen" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("5_pbw6q")
+
+[node name="Background" type="Control" parent="GameOverScreen"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="GameOverScreen/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Label" type="Label" parent="GameOverScreen/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -26.0
+offset_right = 125.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 34
+text = "Game Over"
+
+[node name="RestarLabel" type="Label" parent="GameOverScreen/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = 27.0
+offset_right = 235.0
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 34
+text = "Press ENTER to Restart"
+
+[node name="FinalScoreLabel" type="Label" parent="GameOverScreen/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = 1.0
+offset_right = 81.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 34
+text = "Score: 0"
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+physics_interpolation_mode = 2
+layer = -100
+
+[node name="ColorRect" type="ColorRect" parent="BackgroundLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="StarField" type="GPUParticles2D" parent="BackgroundLayer/ColorRect"]
+position = Vector2(321, 178)
+amount = 100
+lifetime = 4.0
+preprocess = 4.0
+process_material = SubResource("ParticleProcessMaterial_jw32o")

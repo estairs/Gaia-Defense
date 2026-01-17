@@ -1,0 +1,168 @@
+[gd_scene load_steps=19 format=3 uid="uid://djl4va071438b"]
+
+[ext_resource type="Script" uid="uid://gwgm63yee1hy" path="res://Scripts/Earth.gd" id="1_t5f0r"]
+[ext_resource type="Texture2D" uid="uid://yv3oqg4uap3w" path="res://Assets/Earth.png" id="2_h2y3m"]
+[ext_resource type="PackedScene" uid="uid://cfwinhnnh36fg" path="res://Scenes/Turret.tscn" id="3_iurlx"]
+[ext_resource type="Texture2D" uid="uid://kqpm2fbl4gst" path="res://Assets/Base.png" id="3_seqj3"]
+[ext_resource type="Texture2D" uid="uid://dxlv8adawxs4f" path="res://Assets/Input Prompts Pixel 16x/tile_0120.png" id="4_ae5s4"]
+[ext_resource type="Texture2D" uid="uid://ctaq8lw7wsr64" path="res://Assets/Input Prompts Pixel 16x/tile_0122.png" id="5_mq0g1"]
+[ext_resource type="Texture2D" uid="uid://bvhhb7cg6kjw4" path="res://Assets/Input Prompts Pixel 16x/tile_0086.png" id="6_ottip"]
+[ext_resource type="Texture2D" uid="uid://blfxl6gqt7e44" path="res://Assets/Input Prompts Pixel 16x/tile_0169.png" id="7_7fahe"]
+[ext_resource type="Texture2D" uid="uid://crk5tglhm7ue6" path="res://Assets/Input Prompts Pixel 16x/tile_0167.png" id="8_im5w3"]
+[ext_resource type="Texture2D" uid="uid://32nd0u01uj4d" path="res://Assets/Input Prompts Pixel 16x/tile_0166.png" id="9_58d4k"]
+[ext_resource type="Texture2D" uid="uid://bwllgkmdbsayq" path="res://Assets/Input Prompts Pixel 16x/tile_0126.png" id="10_qg5qu"]
+[ext_resource type="Texture2D" uid="uid://bc4r71t8871ju" path="res://Assets/Input Prompts Pixel 16x/tile_0128.png" id="11_8cqhr"]
+[ext_resource type="Texture2D" uid="uid://ch3wl08lue5km" path="res://Assets/Input Prompts Pixel 16x/tile_0092.png" id="12_8wi3j"]
+[ext_resource type="Texture2D" uid="uid://cb2h1hm2c4qbw" path="res://Assets/Input Prompts Pixel 16x/tile_0123.png" id="13_a1pl4"]
+[ext_resource type="Texture2D" uid="uid://c2p8hsrsodlny" path="res://Assets/Input Prompts Pixel 16x/tile_0125.png" id="14_31ad1"]
+[ext_resource type="Texture2D" uid="uid://cq2dbr31tfuku" path="res://Assets/Input Prompts Pixel 16x/tile_0089.png" id="15_hpx28"]
+[ext_resource type="AudioStream" uid="uid://dravdlp623iwo" path="res://Assets/SFXS/EarthBoom.wav" id="17_mq0g1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t5f0r"]
+radius = 34.132095
+
+[node name="Earth" type="Area2D"]
+script = ExtResource("1_t5f0r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("2_h2y3m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_t5f0r")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="TurretTop" parent="." instance=ExtResource("3_iurlx")]
+z_index = -1
+position = Vector2(1.3333344, -33.333332)
+rotation = 4.712389
+input_left = "t1_left"
+input_right = "t1_right"
+input_shoot = "t1_shoot"
+icon_left = ExtResource("4_ae5s4")
+icon_right = ExtResource("5_mq0g1")
+icon_shoot = ExtResource("6_ottip")
+
+[node name="InputVisuals" parent="TurretTop" index="1"]
+position = Vector2(62.22222, -82.222206)
+rotation = 1.5707964
+
+[node name="Left" parent="TurretTop/InputVisuals" index="0"]
+position = Vector2(8.888885, 11.428569)
+
+[node name="Right" parent="TurretTop/InputVisuals" index="1"]
+position = Vector2(35.55555, 11.428569)
+
+[node name="Shoot" parent="TurretTop/InputVisuals" index="2"]
+position = Vector2(22.222216, -3.8095243)
+
+[node name="TurretBot" parent="." instance=ExtResource("3_iurlx")]
+visible = false
+z_index = -1
+position = Vector2(-0.6666667, 33.333332)
+rotation = 1.5707964
+input_left = "t2_left"
+input_right = "t2_right"
+input_shoot = "t2_shoot"
+icon_left = ExtResource("7_7fahe")
+icon_right = ExtResource("8_im5w3")
+icon_shoot = ExtResource("9_58d4k")
+
+[node name="InputVisuals" parent="TurretBot" index="1"]
+position = Vector2(-11.111113, 75.55554)
+rotation = -1.5707964
+
+[node name="Left" parent="TurretBot/InputVisuals" index="0"]
+position = Vector2(35.55555, 9.523812)
+rotation = 3.1415927
+
+[node name="Right" parent="TurretBot/InputVisuals" index="1"]
+position = Vector2(9.841265, 9.523813)
+rotation = 3.1415927
+
+[node name="Shoot" parent="TurretBot/InputVisuals" index="2"]
+position = Vector2(23.174599, 24.761906)
+rotation = 3.1415927
+
+[node name="TurretLeft" parent="." instance=ExtResource("3_iurlx")]
+visible = false
+z_index = -1
+position = Vector2(-34, -1.3333334)
+rotation = 3.1415927
+input_left = "t4_left"
+input_right = "t4_right"
+input_shoot = "t4_shoot"
+icon_left = ExtResource("10_qg5qu")
+icon_right = ExtResource("11_8cqhr")
+icon_shoot = ExtResource("12_8wi3j")
+
+[node name="InputVisuals" parent="TurretLeft" index="1"]
+position = Vector2(66.66667, 73.33331)
+rotation = 3.1415927
+
+[node name="Left" parent="TurretLeft/InputVisuals" index="0"]
+position = Vector2(13.33334, 35.555546)
+
+[node name="Right" parent="TurretLeft/InputVisuals" index="1"]
+position = Vector2(13.333334, 9.841265)
+
+[node name="Shoot" parent="TurretLeft/InputVisuals" index="2"]
+position = Vector2(-1.9047577, 22.222218)
+
+[node name="TurretRight" parent="." instance=ExtResource("3_iurlx")]
+visible = false
+z_index = -1
+position = Vector2(33.33333, 0.66666675)
+input_left = "t3_left"
+input_right = "t3_right"
+input_shoot = "t3_shoot"
+icon_left = ExtResource("13_a1pl4")
+icon_right = ExtResource("14_31ad1")
+icon_shoot = ExtResource("15_hpx28")
+
+[node name="InputVisuals" parent="TurretRight" index="1"]
+position = Vector2(66.66668, -79.99999)
+
+[node name="Left" parent="TurretRight/InputVisuals" index="0"]
+position = Vector2(-12.698412, 8.888887)
+
+[node name="Right" parent="TurretRight/InputVisuals" index="1"]
+position = Vector2(-12.698413, 35.55555)
+
+[node name="Shoot" parent="TurretRight/InputVisuals" index="2"]
+position = Vector2(2.5396838, 22.22222)
+
+[node name="BaseTop" type="Sprite2D" parent="."]
+position = Vector2(0, -40.000008)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_seqj3")
+
+[node name="BaseBottom" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-3.031649e-13, 40)
+rotation = -3.1415925
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_seqj3")
+
+[node name="BaseLeft" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-40.666668, -3.7895614e-14)
+rotation = -1.5707964
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_seqj3")
+
+[node name="BaseRight" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(40, 3.7895604e-14)
+rotation = 1.5707964
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_seqj3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_mq0g1")
+volume_db = -5.0
+
+[editable path="TurretTop"]
+[editable path="TurretBot"]
+[editable path="TurretLeft"]
+[editable path="TurretRight"]
