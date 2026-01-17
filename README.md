@@ -62,3 +62,11 @@ If you want to check the source code or modify the game:
     * Navigate to the cloned folder and select the `project.godot` file.
 3.  **Run:**
     * Press `F5` to play the main scene.
+
+## © Credits
+
+* **Game Design & Code:** [Stairs]
+* **Assets:** [Kenney.nl](https://kenney.nl/) (UI) & Custom Pixel Art
+* **SFX:** Generated via Bfxr
+
+---*Developed by Stairs*
