@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cb2h1hm2c4qbw" path="res://Assets/Input Prompts Pixel 16x/tile_0123.png" id="13_a1pl4"]
 [ext_resource type="Texture2D" uid="uid://c2p8hsrsodlny" path="res://Assets/Input Prompts Pixel 16x/tile_0125.png" id="14_31ad1"]
 [ext_resource type="Texture2D" uid="uid://cq2dbr31tfuku" path="res://Assets/Input Prompts Pixel 16x/tile_0089.png" id="15_hpx28"]
-[ext_resource type="AudioStream" uid="uid://dravdlp623iwo" path="res://Assets/SFXS/EarthBoom.wav" id="17_mq0g1"]
+[ext_resource type="AudioStream" uid="uid://ddckf181vbf6" path="res://Assets/Sfx/EarthBoom.wav" id="17_mq0g1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t5f0r"]
 radius = 34.132095

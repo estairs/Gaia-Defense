@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2hrptlnmw01y"]
 
 [ext_resource type="Script" uid="uid://bvs7sub6gbc6v" path="res://Scripts/Bullet.gd" id="1_14k46"]
-[ext_resource type="Texture2D" uid="uid://3vbqr016lqtr" path="res://Assets/Cannon Ball.png" id="2_14k46"]
+[ext_resource type="Texture2D" uid="uid://vktdk0bjn8gr" path="res://Assets/Cannon Ball.png" id="2_14k46"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pypll"]
 size = Vector2(9, 8)

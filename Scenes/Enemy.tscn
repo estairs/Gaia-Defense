@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://df7yxif33akof" path="res://Scripts/Enemy.gd" id="1_wovta"]
 [ext_resource type="Texture2D" uid="uid://c7wxyw3u2geub" path="res://Assets/Alien.png" id="2_wovta"]
-[ext_resource type="AudioStream" uid="uid://bj0qqnr8x1u50" path="res://Assets/SFXS/EnemyBoom.wav" id="3_xeo28"]
+[ext_resource type="AudioStream" uid="uid://bf0r4rfsp3lvb" path="res://Assets/Sfx/EnemyBoom.wav" id="3_xeo28"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wovta"]
 size = Vector2(103.33333, 140)

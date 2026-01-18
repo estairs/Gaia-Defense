@@ -2,12 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://3k0if8kwd28k"
-valid=false
+uid="uid://bncrqnwg67scx"
+path="res://.godot/imported/m5x7.ttf-ede74fbe3753eb2fe0ebc455b7b3a4db.fontdata"
 
 [deps]
 
 source_file="res://m5x7.ttf"
+dest_files=["res://.godot/imported/m5x7.ttf-ede74fbe3753eb2fe0ebc455b7b3a4db.fontdata"]
 
 [params]
 

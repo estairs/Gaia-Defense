@@ -2,7 +2,7 @@ class_name Earth
 extends Area2D
 
 # Configurações
-@export var max_health: int = 5
+@export var max_health: int = 2
 @onready var current_health: int = max_health
 
 @onready var sprite: Sprite2D = $Sprite2D
